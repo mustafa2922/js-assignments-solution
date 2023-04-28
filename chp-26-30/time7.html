@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var weightInput = prompt("Enter your weight: ");
+        var decimal = false
+
+        for (var i = 0; i < weightInput.length; i++) {
+            if (weightInput[i] == ".") {
+                decimal = true
+            }
+        }
+
+        if (decimal == true) {
+            weightInput = parseFloat(weightInput)
+        }
+        else {
+            weightInput = parseInt(weightInput)
+        }
+
+        document.write("<h1> Your weight is " + weightInput + " kilograms. </h1>");
+
+    </script>
+</body>
+
+</html>

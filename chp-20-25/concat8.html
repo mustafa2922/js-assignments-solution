@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = "Ali and Sami are best friends. They play cricket and football together";
+        document.write("<h3>ORIGNAL PARAGRAPH :- "+message+"</h3>")
+        var to_replace = "and"
+        var replace_with = "&"
+        for (var i = 0 ; i < message.length ; i++ ) {
+            if (message.slice(i,i+to_replace.length) == to_replace ) {
+                message = message.slice(0,i) + replace_with + message.slice(i+to_replace.length)
+            }
+        }
+        document.write("<h3>REPLACED PARAGRAPH :- "+message+"</h3>")
+    </script>
+</body>
+</html>

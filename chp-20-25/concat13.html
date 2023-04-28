@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        var flag = true
+        var special = ["@", ",", ".", "!"]
+        var input = prompt("Enter your name :- ")
+        for (var i = 0; i < input.length; i++) {
+            for (var j = 0; j < special.length; j++) {
+                if (input[i] == special[j]) {
+                    flag = false
+                }
+            }
+        }
+
+        if (flag == true) {
+            swal({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Correct Name',
+                Button: false,
+                timer: 1500
+            })
+        }
+        else {
+            swal({
+                title: "Error",
+                text: "Pleae Enter A Valid Username",
+                icon: "warning",
+                buttons: false,
+                dangerMode: true,
+                timer : 1300
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sub1 = +prompt("Enter The Marks Of First Subject :- ")
+        var sub2 = +prompt("Enter The Marks Of Second Subject :- ")
+        var sub3 = +prompt("Enter The Marks Of Third Subject :- ")
+        var total = +prompt("Enter Total Marks :- ")
+        document.write("<h1>Marks Sheet</h1>")
+        var percentage = ( (sub1 + sub2 + sub3 ) / total ) * 100
+
+        if (percentage >= 80) {
+            document.write("<h2>Total Marks : "+total+"</h2>")
+            document.write("<h2>Marks Obtained : "+sub1+sub2+sub3+"</h2>")
+            document.write("<h2>Percentage : "+percentage+"%</h2>")
+            document.write("<h2 style='color:green'>Grade : A-one</h2>")
+            document.write("<h2 style='color:green'>Remarks : Excellent</h2>")
+        }
+
+        else if (percentage >= 70) {
+            document.write("<h2>Total Marks : "+total+"</h2>")
+            document.write("<h2>Marks Obtained : "+sub1+sub2+sub3+"</h2>")
+            document.write("<h2>Percentage : "+percentage+"%</h2>")
+            document.write("<h2 style='color:lightgreen'>Grade : A</h2>")
+            document.write("<h2 style='color:lightgreen'>Remarks : Good</h2>")
+        }
+
+        else if (percentage >= 60) {
+            document.write("<h2>Total Marks : "+total+"</h2>")
+            document.write("<h2>Marks Obtained : "+sub1+sub2+sub3+"</h2>")
+            document.write("<h2>Percentage : "+percentage+"%</h2>")
+            document.write("<h2 style='color:yellow'>Grade : B</h2>")
+            document.write("<h2 style='color:yellow'>Remarks : You Need To Improve</h2>")
+        }
+
+        else if (percentage < 60) {
+            document.write("<h2>Total Marks : "+total+"</h2>")
+            document.write("<h2>Marks Obtained : "+sub1+sub2+sub3+"</h2>")
+            document.write("<h2>Percentage : "+percentage+"%</h2>")
+            document.write("<h2 style='color:red'>Grade : Fail</h2>")
+            document.write("<h2 style='color:red'>Remarks : Sorry</h2>")
+        }
+    </script>
+</body>
+</html>

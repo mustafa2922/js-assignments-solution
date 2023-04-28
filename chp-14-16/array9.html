@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var colors = ["Red","Blue","Green"]
+        alert("Initialized Array : [" + colors + "]")
+
+        document.write("<p> <em>Initialized Array ;</em> <br /><br /> ["+ colors +"] </p> <br />")
+
+        var beg_add_color = prompt("Enter a color name to add to the beginning of the array :- ")
+        colors.unshift(beg_add_color)
+        alert("Array with addition of " + beg_add_color + " color in beginning : [" + colors + "]")
+
+        document.write("<p> <em>Array with addition of " + beg_add_color + " color in beginning ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        var end_add_color = prompt("Enter a color name to add to the end of the array :- ")
+        colors.push(end_add_color)
+        alert("Array with addition of " + end_add_color + " color in end : [" + colors + "]")
+
+        document.write("<p> <em>Array with addition of " + end_add_color + " color in last ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        colors.unshift("Khaki","Mahroon")
+        alert("Two more colors added : [" + colors + "]")
+
+        document.write("<p> <em>Two more colors added ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        colors.shift()
+        alert("First color deleted : [" + colors + "]")
+
+        document.write("<p> <em>First color deleted ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        colors.pop()
+        alert("Last color deleted : [" + colors + "]")
+
+        document.write("<p> <em>Last color deleted ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        var a_ind = +prompt("Enter a index at which you want to add a color :- ")
+        var ind_add_color = prompt("Enter a color name you want to add at index no " + a_ind + " :- ")
+
+        colors.splice(a_ind,0,ind_add_color)
+        alert("Array with addition of " + ind_add_color + " at index " + a_ind + " : [" + colors + "]")
+
+        document.write("<p> <em>Array with addition of " + ind_add_color + " at index " + a_ind + " ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+        var d_ind = +prompt("Enter a index from which you want to delete a color :- ")
+        var num_del_color = prompt("How many colors you want to delete from index " + d_ind + " :- ")
+
+        colors.splice(d_ind,num_del_color)
+        alert("Array with substraction of " + num_del_color + " colors from index " + d_ind + " :- [" + colors + "]")
+
+        document.write("<p> <em>Array with substraction of " + num_del_color + " colors from index " + d_ind + " ;</em> <br /><br /> ["+ colors +"] </p><br />")
+
+    </script>
+</body>
+</html>

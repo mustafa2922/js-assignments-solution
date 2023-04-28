@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sub1 = prompt("Enter first subject :- ")
+        var sub2 = prompt("Enter second subject :- ")
+        var sub3 = prompt("Enter third subject :- ")
+        var total_marks = 100
+        var sub1_marks = prompt("Enter obtained marks of subject 1 :- ")
+        var sub2_marks = prompt("Enter obtained marks of subject 2 :- ")
+        var sub3_marks = prompt("Enter obtained marks of subject 3 :- ")
+
+        document.write(
+            "<table border='2' style='text-align : center ;'> <tr> <th>Subject</th> <th>Total Marks</th> <th>Obtained Marks</th> <th>Percentage</th>   </tr>   <tr> <td>"+sub1+"</td> <td>"+total_marks+"</td> <td>"+sub1_marks+"</td> <td>"+((sub1_marks/total_marks)*100)+"%</td> </tr>   <tr> <td>"+sub2+"</td> <td>"+total_marks+"</td> <td>"+sub2_marks+"</td> <td>"+((sub2_marks/total_marks)*100)+"%</td> </tr>   <tr> <td>"+sub3+"</td> <td>"+total_marks+"</td> <td>"+sub3_marks+"</td> <td>"+((sub3_marks/total_marks)*100)+"%</td> </tr> </table>"
+        )
+    </script>
+</body>
+</html>

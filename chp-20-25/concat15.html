@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        
+        var flag = 0
+        var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        var alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        var password = prompt("Enter a password :- ")
+        if (password.length < 6) {
+            swal({
+                title: "Error",
+                text: " Pleae Enter A Valid Password \n It must at least 6 characters long",
+                icon: "warning",
+                buttons: false,
+                dangerMode: true,
+                timer: 3000
+            })
+        }
+        else {
+            if (flag == 0) {
+                for (var i = 0; i < password.length; i++) {
+                    for (var j = 0; j < nums.length; j++) {
+                        if (password[i] == nums[j]) {
+                            flag = 1
+                        }
+                    }
+                }
+            }
+
+            if (flag == 0) {
+                flag = 5
+            }
+
+            else {
+                for (var i = 0; i < password.length; i++) {
+                    for (var j = 0; j < alphabets.length; j++) {
+                        if (password[i] == alphabets[j]) {
+                            flag = 2
+                        }
+                    }
+                }
+            }
+
+
+
+            if (flag == 2) {
+                for (var i = 0; i < nums.length; i++) {
+                    if (password[0] == nums[i]) {
+                        flag = 3
+                    }
+                }
+            }
+
+        }
+        if (flag == 2) {
+            swal({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Correct Password',
+                Button: false,
+                timer: 3000
+            })
+        }
+
+        if (flag == 1) {
+            swal({
+                position: 'top-end',
+                icon: 'error',
+                title: ' Pleae Enter A Valid Password \n It must contain alphabets',
+                Button: true,
+
+            })
+        }
+
+        if (flag == 5) {
+            swal({
+                position: 'top-end',
+                icon: 'error',
+                title: ' Pleae Enter A Valid Password \n It must contain numbers',
+                Button: true,
+            })
+        }
+
+        if (flag == 3) {
+            swal({
+                position: 'top-end',
+                icon: 'error',
+                title: ' Pleae Enter A Valid Password \n It should not start with a number',
+                Button: true,
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var favorite_snack = "chocolate chip"
+        var age = 15
+        var max_age = 65
+        var per_day = 3
+        document.write("<h1> The Life Time Supply Calculator</h1>")
+        document.write("<p> Favorite Snack : " + favorite_snack + "</p>")
+        document.write("<p> Current age : " + age + "</p>")
+        document.write("<p> Estimated Maximum Age : " + max_age + "</p>")
+        document.write("<p> Amount of snacks per day : " + per_day + "</p>")
+        var day = (65-15)*365.25
+        var total = day * per_day
+        document.write("<p> You will need " + total + favorite_snack + " to last you until the RIP age of " + max_age + "</p>")
+    </script>
+</body>
+</html>
